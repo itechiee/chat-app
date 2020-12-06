@@ -1,7 +1,15 @@
 function socket(io) {
  
   io.on('connection', function(socket) {
-    console.log("user connected123");
+    socket.on("new message", function(data) {
+      let chatData = {
+        username: data.username,
+        message: data.message,
+        date: Date.now()
+      };
+
+      socket.emit("chat message", chatData);
+    })
   })
 }
 

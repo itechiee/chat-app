@@ -1,13 +1,21 @@
 doctype html
 html
   head
+  
     title= title
+
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    //- Favicon
+    //- Favicon
+
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/socket.io/socket.io.js")
-    script.
-      var socket = io('http://localhost:3000');
-      socket.on('socketToMe', function(data) {
-        console.log(data);
-      })
+    script(src="/socket.io/socket.io.js")    
+    script(src="/javascripts/custom.js")    
+    
   body
     block content

@@ -3,3 +3,12 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  #char-wrap
+  #chat-msgs
+  #chat-fields
+    input#chat-user(type='text' value='')
+    input#chat-input(type='text' value='')
+    input#chat-btn(type='button' value='Send')
+  
+  
